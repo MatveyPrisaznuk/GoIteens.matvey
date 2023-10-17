@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WW1</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        
+      
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #a0a0a0;
+            color: white;
+            padding: 10px;
+        }
+
+        #header h1 {
+            font-size: 32px;
+            margin: 0;
+            justify-content: space-between;
+            align-items: center; 
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #content h1 {
+            font-size: 24px; 
+            font-family: "Arial", sans-serif; 
+            color: #333;
+        }
+
+        #content video {
+            width: 100%; 
+            height: auto; 
+            
+        }
+
+        #footer {
+            background-color: #666666;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 20px 0 10px;
+        }
+
+        .article-content {
+            line-height: 1.6;
+        }
+
+        .references {
+            font-size: 14px;
+        }
+    
+        body {
+            background-image: url('{{ url_for('static', filename='images7.png') }}');
+            background-size: 100% auto;
+        }
+
+        #music {
+            position: fixed;
+            bottom: 10px; 
+            right: 10px; 
+        }
+    </style>
+</head>
+        <div id="header">
+            <h1>War.Wiki</h1>
+                <div class="header-buttons">
+                    <button class="header-button" onclick="window.location.href='{{ url_for('index') }}'">Home</button>
+                    <button class="header-button" onclick="window.location.href='{{ url_for('home') }}'">Account</button>
+                    <button class="header-button" onclick="window.location.href='{{ url_for('hobbys') }}'">Back</button>
+                </div>
+        </div>
+    <div id="content">
+        <div id="content">
+    <h1>WW1</h1>
+    </div>
+    <div id="content h1">
+        <h1>Пе́рша світова́ війна́ — світова війна, глобальний збройний конфлікт, що розвивався перш за все в Європі з 28 липня 1914 до 11 листопада 1918 року, в якому брали участь 38 держав із населенням 1,5 млрд мешканців. У той час відома як Велика війна (The Great War,La Grande guerre) або «Війна, щоб завершити всі війни»,також є одним із найсмертоносніших конфліктів в історії,в якому, за оцінками істориків, загинуло до 8,5 мільйона військових і 13 мільйонів цивільних.</h1>
+    </div>
+    <div id="content">
+        <div id="video-container">
+            <video autoplay loop muted controls>
+                <source src="{{ url_for('static', filename='video7.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    <audio id="music" controls>
+        <source src="/static/music.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

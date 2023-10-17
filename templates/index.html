@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAR</title>
+    <img src="{{ url_for('static', filename='result.gif') }}" alt="Анімація" style="width: auto; height: auto;">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+    <h1 style="color: white;">Тут зберігається інформація про війни</h1>
+
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+    </video>
+    <p><a href="{{ url_for('about') }}">Дізнайтеся більше про події</a></p>
+
+    <audio id="music" controls style="position: fixed; bottom: 10px; right: 10px;">
+        <source src="/static/music2.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

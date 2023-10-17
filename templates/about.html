@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #a0a0a0;
+            color: white;
+            padding: 10px;
+        }
+
+        #header h1 {
+            font-size: 32px;
+            margin: 0;
+            justify-content: space-between;
+            align-items: center; 
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #content video {
+            width: 100%; 
+            height: auto; 
+        }
+
+        #footer {
+            background-color: #666666;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #footer p {
+            margin: 0;
+        }
+
+        .article-title {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 20px 0 10px;
+        }
+
+        .article-content {
+            line-height: 1.6;
+        }
+
+        .references {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>War.Wiki</h1>
+            <div class="header-buttons">
+                <button class="header-button" onclick="window.location.href='{{ url_for('index') }}'">Home</button>
+                <button class="header-button" onclick="window.location.href='{{ url_for('home') }}'">Account</button>
+            </div>
+    </div>
+<head>
+    <title>Achtung</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='result2.gif') }}" alt="Анімація" style="width: auto; height: auto;">
+    <p style="color: white;">переходячи по новій ссилці, ви приймаєте правила конфіденційності нашого сайту</p>
+    <p style="color: white;">Щоб дізнатися більше про події минулого, потрібно зареєструватись</p>
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='video2.mp4') }}" type="video/mp4">
+    </video>
+    <p><a href="{{ url_for('home') }}">Вхід/Реєстрація</a></p>
+
+
+    <audio id="music" controls style="position: fixed; bottom: 10px; right: 10px;">
+        <source src="/static/music3.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

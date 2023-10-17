@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Register</title>
+</head>
+
+<body>
+    <h1>Реєстрація</h1>
+    <video autoplay muted loop id="background-video">
+        <source src="{{ url_for('static', filename='video4.mp4') }}" type="video/mp4">
+    </video>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+    <a href="{{ url_for('login') }}">Вже маєте аккаунт? Заходьте</a>
+
+    <audio id="music" controls style="position: fixed; bottom: 10px; right: 10px;">
+        <source src="/static/music5.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
