@@ -120,7 +120,7 @@ def register():
     return render_template('register.html', form=form)
 
 
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
 
@@ -136,6 +136,16 @@ def ww1():
 @app.route('/ww2')
 def ww2():
     return render_template('ww2.html')
+
+########################################################
+
+@app.route('/')
+def street():
+    return render_template('street.html')
+
+@app.route('/buy')
+def buy():
+    return render_template('buy.html')
 
 
 
